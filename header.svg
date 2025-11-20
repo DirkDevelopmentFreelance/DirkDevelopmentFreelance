@@ -1,48 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1200px" height="260px" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#fefcbf"/>
-      <stop offset="100%" stop-color="#cffafe"/>
+    <!-- Calm tropical sky blue -->
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a0e7ff"/>
+      <stop offset="100%" stop-color="#e0f6ff"/>
     </linearGradient>
-    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#a7f3d0"/>
-      <stop offset="100%" stop-color="#86efac"/>
-    </linearGradient>
-    <g id="leaf"><path d="M0,25 Q20,-25 50,0 Q20,25 -10,40 Q-20,20 0,25 Z" fill="url(#leafGrad)" opacity="0.55"/></g>
-    <g id="budgie">
-      <ellipse cx="50" cy="45" rx="28" ry="32" fill="#84ec7a"/>
-      <ellipse cx="52" cy="52" rx="20" ry="24" fill="#60a5fa"/>
-      <circle cx="58" cy="28" r="18" fill="#84ec7a"/>
-      <path d="M32,45 Q15,35 20,60 Q30,65 42,52" fill="#68c860"/>
-      <circle cx="64" cy="25" r="5" fill="#fff"/>
-      <circle cx="65" cy="24" r="3" fill="#222"/>
-      <circle cx="66" cy="23" r="1.5" fill="#fff"/>
-      <circle cx="62" cy="32" r="2" fill="#222" opacity="0.6"/>
-      <circle cx="68" cy="32" r="2" fill="#222" opacity="0.6"/>
-      <path d="M70,30 L76,32 L70,34 Z" fill="#fbbf24"/>
+
+    <!-- Tiny delicate leaf -->
+    <g id="tinyLeaf">
+      <path d="M0,8 Q6,-10 14,0 Q6,10 -4,14 Q-10,6 0,8 Z" fill="#86efac" opacity="0.7"/>
     </g>
-    <g id="parrot">
-      <path d="M40,70 Q70,-10 100,40 Q110,80 80,100 Q60,90 40,70" fill="#f87171"/>
-      <path d="M45,65 Q20,40 35,90 Q55,95 70,75" fill="#4ade80"/>
-      <circle cx="85" cy="35" r="22" fill="#fbbf24"/>
-      <path d="M80,25 Q90,20 100,30 Q95,40 80,38" fill="#fff"/>
-      <circle cx="92" cy="32" r="6" fill="#fff"/>
-      <circle cx="93" cy="31" r="3.5" fill="#222"/>
-      <path d="M102,30 Q110,35 105,45 Q100,42 102,30" fill="#1f2937"/>
+
+    <!-- Cute budgie (still, but gently bobbing) -->
+    <g id="budgie">
+      <ellipse cx="60" cy="80" rx="36" ry="42" fill="#84cc16"/>
+      <ellipse cx="62" cy="94" rx="26" ry="32" fill="#fef08a"/>
+      <circle cx="72" cy="48" r="24" fill="#fef08a"/>
+      <path d="M58,34 Q72,24 86,34" fill="#22c55e"/>
+      <path d="M40,78 Q18,60 28,108" fill="#16a34a"/>
+      <circle cx="78" cy="54" r="3.8" fill="#1e1b4b"/>
+      <circle cx="86" cy="54" r="3.8" fill="#1e1b4b"/>
+      <circle cx="82" cy="45" r="6.5" fill="#fff"/>
+      <circle cx="84" cy="44" r="3.8" fill="#1e1b4b"/>
+      <circle cx="85" cy="43" r="1.8" fill="#fff"/>
+      <path d="M90,50 L98,52 L90,54 Z" fill="#f97316"/>
+    </g>
+
+    <!-- Flying scarlet macaw (will animate across the screen) -->
+    <g id="flyingParrot">
+      <path d="M50,100 Q100,-30 150,60 Q165,130 110,160 Q70,140 50,100" fill="#ef4444"/>
+      <path d="M60,100 Q20,50 45,140 Q85,160 120,120" fill="#22c55e"/>
+      <path d="M40,110 Q5,70 25,150 Q65,165 95,135" fill="#3b82f6"/>
+      <circle cx="135" cy="55" r="28" fill="#fbbf24"/>
+      <path d="M120,40 Q140,30 160,45 Q155,65 125,60 Z" fill="#fff"/>
+      <circle cx="145" cy="52" r="7.5" fill="#fff"/>
+      <circle cx="147" cy="51" r="4.5" fill="#1e1b4b"/>
+      <path d="M160,50 Q178,55 170,68 Q162,65 160,50" fill="#1e1b4b"/>
+      <path d="M100,160 Q120,220 130,200 Q120,240 100,180" fill="#ef4444"/>
+      <path d="M110,160 Q125,225 135,205" fill="#3b82f6"/>
     </g>
   </defs>
-  <rect width="1200" height="260" fill="url(#skyGrad)"/>
-  <g opacity="0.75">
-    <use href="#leaf" x="80" y="50"><animateTransform attributeName="transform" type="translate" values="0,0; 0,25; 0,0" dur="14s" repeatCount="indefinite"/></use>
-    <use href="#leaf" x="320" y="30" transform="rotate(70)"><animateTransform attributeName="transform" type="translate" values="0,0; 0,20; 0,0" dur="16s" repeatCount="indefinite"/></use>
-    <use href="#leaf" x="580" y="70" transform="rotate(-50)"><animateTransform attributeName="transform" type="translate" values="0,0; 0,30; 0,0" dur="18s" repeatCount="indefinite"/></use>
-    <use href="#leaf" x="850" y="40" transform="rotate(110)"><animateTransform attributeName="transform" type="translate" values="0,0; 0,22; 0,0" dur="15s" repeatCount="indefinite"/></use>
-    <use href="#leaf" x="1080" y="60"><animateTransform attributeName="transform" type="translate" values="0,0; 0,28; 0,0" dur="17s" repeatCount="indefinite"/></use>
+
+  <!-- Sky background -->
+  <rect width="1200" height="300" fill="url(#sky)"/>
+
+  <!-- 70 tiny floating leaves (gentle random drift) -->
+  <g opacity="0.65">
+    <!-- Example: 70 leaves with random positions and animation speeds -->
+    <script type="text/ecmascript"><![CDATA[
+      const positions = [
+        [50,60],[150,40],[250,100],[350,30],[450,80],[550,50],[650,110],[750,20],[850,90],[950,60],[1050,40],
+        [100,120],[200,80],[300,140],[400,50],[500,110],[600,70],[700,130],[800,40],[900,100],[1000,80],[1100,120],
+        [80,180],[180,150],[280,200],[380,160],[480,190],[580,140],[680,180],[780,160],[880,200],[980,150],
+        [120,220],[220,180],[320,240],[420,200],[520,230],[620,180],[720,220],[820,190],[920,240],[1020,210],
+        [70,250],[170,220],[270,260],[370,230],[470,255],[570,220],[670,260],[770,230],[870,250],[970,220],
+        [130,270],[230,250],[330,280],[430,260],[530,275],[630,250],[730,245],[830,270],[930,255],[1030,275]
+      ];
+      positions.forEach((pos, i) => {
+        const leaf = document.createElementNS("http://www.w3.org/2000/svg", "use");
+        leaf.setAttribute("href", "#tinyLeaf");
+        leaf.setAttribute("x", pos[0]);
+        leaf.setAttribute("y", pos[1]);
+        const dur = 12 + (i % 10);
+        const delay = i * 0.2;
+        leaf.innerHTML = `<animateTransform attributeName="transform" type="translate" values="0,0;0,30;0,0" dur="${dur}s" repeatCount="indefinite" begin="${delay}s"/>
+                         <animateTransform attributeName="transform" type="rotate" values="0;15;-10;0" dur="${dur*1.5}s" repeatCount="indefinite" additive="sum"/>`;
+        document.querySelector("g[opacity='0.65']").appendChild(leaf);
+      });
+    ]]></script>
   </g>
-  <use href="#budgie" x="130" y="100"/>
-  <use href="#parrot" x="370" y="75"/>
-  <use href="#parrot" x="770" y="80" transform="scale(-1,1) translate(-900,0)"/>
-  <circle cx="220" cy="70" r="3" fill="#fcd34d" opacity="0.8"><animate attributeName="cy" values="70;50;70" dur="6s" repeatCount="indefinite"/></circle>
-  <circle cx="720" cy="150" r="3" fill="#93c5fd" opacity="0.8"><animate attributeName="cy" values="150;125;150" dur="8s" repeatCount="indefinite"/></circle>
+
+  <!-- Budgie (gentle floating + tiny wing flap) -->
+  <use href="#budgie" x="180" y="90">
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-15;0,0" dur="10s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="scale" values="1,1;1.05,0.95;1,1" dur="4s" repeatCount="indefinite" additive="sum"/>
+  </use>
+
+  <!-- Flying parrot (smooth flight across the screen) -->
+  <use href="#flyingParrot" x="0" y="70">
+    <animateMotion path="M-200,0 Q400,50 1200,30 Q1600,50 2000,0" dur="45s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate" values="-10;10;-5;10;-10" dur="8s" repeatCount="indefinite" additive="sum"/>
+  </use>
+
+  <!-- Soft sparkles -->
+  <circle cx="400" cy="100" r="3" fill="#fff" opacity="0.6">
+    <animate attributeName="cy" values="100;70;100" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="150" r="3" fill="#fff" opacity="0.5">
+    <animate attributeName="cy" values="150;120;150" dur="10s" repeatCount="indefinite"/>
+  </circle>
 </svg>
